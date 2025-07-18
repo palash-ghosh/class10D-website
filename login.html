@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="loginstyle.css" />
+    <link rel="shortcut icon" type="x-icon" href="Image/logo1.jpg" />
+    <title>Roll Number Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login with Roll Number</h2>
+      <form id="loginForm">
+        <label for="roll">Enter your Roll Number:</label>
+        <input type="text" id="roll" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        query,
+        where,
+        getDocs,
+      } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyC8Mx4NAN_8SfJHkbNNhl2fdek1TZR3ryQ",
+        authDomain: "class-10-website.firebaseapp.com",
+        projectId: "class-10-website",
+        storageBucket: "class-10-website.appspot.com", // ✅ fixed here
+        messagingSenderId: "743842091983",
+        appId: "1:743842091983:web:1ebd6e56af260ebf6df8ba",
+        measurementId: "G-7C9TPM3RM8",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const usersRef = collection(db, "users");
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const roll = document.getElementById("roll").value.trim();
+
+          if (!roll) {
+            alert("Please enter a roll number.");
+            return;
+          }
+
+          try {
+            const rollNum = isNaN(roll) ? roll : parseInt(roll); // 🔄 supports both number or string
+            console.log("Attempting to login with roll:", rollNum);
+
+            const q = query(usersRef, where("roll", "==", rollNum));
+            const querySnapshot = await getDocs(q);
+
+            console.log("QuerySnapshot size:", querySnapshot.size);
+
+            if (!querySnapshot.empty) {
+              const userData = querySnapshot.docs[0].data();
+              const role = userData.role || "student";
+              alert(`Login successful! Role: ${role}`);
+
+              if (role === "admin") {
+                const choice = confirm(
+                  "Where would you like to go? \nPress OK for Admin Panel or Cancel for Second Page."
+                );
+                window.location.href = choice ? "admin.html" : "second.html";
+              } else if (role === "vip") {
+                window.location.href = "vip.html";
+              } else {
+                window.location.href = "second.html";
+              }
+            } else {
+              alert("Invalid roll number. Please try again.");
+            }
+          } catch (error) {
+            console.error("Login error:", error);
+            alert("An error occurred while logging in. Please try again.");
+          }
+        });
+    </script>
+  </body>
+</html>

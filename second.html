@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="secondstyle.css" />
+  <link rel="shortcut icon" type="x-icon" href="Image/logo1.jpg" />
+  <title>Class 10-D</title>
+</head>
+
+<body>
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#students">Students List</a>
+    <a href="#credits">Credits</a>
+  </nav>
+
+  <div class="container">
+    <section id="home">
+      <h1>Welcome to our web page</h1>
+
+      <h3
+        class="text-2xl font-semibold mb-4 text-gray-800 md:text-3xl dark:text-white flex items-center justify-center">
+        <span class="mr-2">📚</span>
+        <span id="typed-text" class="text-primary mx-2"></span>
+      </h3>
+
+      <h2>Class Teacher</h2>
+      <img src="student/bijoysir.jpg" alt="Class Teacher" width="150" />
+      <p>Phone: 123-456-7890</p>
+
+      <h2>Class Captains</h2>
+      <img src="student/239.jpg" alt="Captain 1" width="100" />
+      <img src="student/112.jpg" alt="Captain 2" width="100" />
+      <img src="student/301.jpg" alt="Captain 3" width="100" />
+    </section>
+
+    <section id="events">
+      <h2>Events</h2>
+      <p>No events currently. Stay tuned for updates!</p>
+    </section>
+
+    <section id="schedule">
+      <h2>Schedule</h2>
+      <div id="schedule-details" class="table-container">
+        <table>
+          <tr>
+            <th colspan="2">বার</th>
+            <th>রবিবার</th>
+            <th>সোমবার</th>
+            <th>মঙ্গলবার</th>
+            <th>বুধবার</th>
+            <th>বৃহস্পতিবার</th>
+          </tr>
+          <tr>
+            <th>১ম</th>
+            <th>১০.০০-১০.৫০</th>
+            <td data-label="রবিবার">গণিত</td>
+            <td data-label="সোমবার">গণিত</td>
+            <td data-label="মঙ্গলবার">গণিত</td>
+            <td data-label="বুধবার">গণিত</td>
+            <td data-label="বৃহস্পতিবার">গণিত</td>
+          </tr>
+          <tr>
+            <th>২য়</th>
+            <th>১০.৫০-১১.৪০</th>
+            <td data-label="রবিবার">বাংলা-১ম</td>
+            <td data-label="সোমবার">বাংলা-১ম</td>
+            <td data-label="মঙ্গলবার">ইংরেজী-২য়</td>
+            <td data-label="বুধবার">ইংরেজী-২য়</td>
+            <td data-label="বৃহস্পতিবার">ইংরেজী-২য়</td>
+          </tr>
+          <tr>
+            <th>৩য়</th>
+            <th>১১.৪০-১২.২৫</th>
+            <td data-label="রবিবার">অর্থনীতি</td>
+            <td data-label="সোমবার">অর্থনীতি</td>
+            <td data-label="মঙ্গলবার">অর্থনীতি</td>
+            <td data-label="বুধবার">ধর্ম</td>
+            <td data-label="বৃহস্পতিবার">ধর্ম</td>
+          </tr>
+          <tr>
+            <th>৪র্থ</th>
+            <th>১২.২৫-০১.১০</th>
+            <td data-label="রবিবার">বিজ্ঞান</td>
+            <td data-label="সোমবার">বিজ্ঞান</td>
+            <td data-label="মঙ্গলবার">বিজ্ঞান</td>
+            <td data-label="বুধবার">ICT</td>
+            <td data-label="বৃহস্পতিবার">ICT</td>
+          </tr>
+          <tr>
+            <th></th>
+            <th>০১.১০-০২.০০</th>
+            <td colspan="5" data-label="বিরতি">বিরতি</td>
+          </tr>
+          <tr>
+            <th>৫ম</th>
+            <th>০২.০০-০২.৪০</th>
+            <td data-label="রবিবার">ইতিহাস</td>
+            <td data-label="সোমবার">ইতিহাস</td>
+            <td data-label="মঙ্গলবার">ইতিহাস</td>
+            <td data-label="বুধবার">কৃষি</td>
+            <td data-label="বৃহস্পতিবার">কৃষি</td>
+          </tr>
+          <tr>
+            <th>৬ষ্ঠ</th>
+            <th>০২.৪০-০৩.২০</th>
+            <td data-label="রবিবার">ইংরেজী-১ম</td>
+            <td data-label="সোমবার">ইংরেজী-১ম</td>
+            <td data-label="মঙ্গলবার">ভুগোল</td>
+            <td data-label="বুধবার">ভুগোল</td>
+            <td data-label="বৃহস্পতিবার">ভুগোল</td>
+          </tr>
+          <tr>
+            <th>৭ম</th>
+            <th>০৩.২০-০৪.০০</th>
+            <td data-label="রবিবার">বাংলা-২য়</td>
+            <td data-label="সোমবার">বাংলা-২য়</td>
+            <td data-label="মঙ্গলবার">ইংরেজী-১ম</td>
+            <td data-label="বুধবার">ইংরেজী-১ম</td>
+            <td data-label="বৃহস্পতিবার">ইংরেজী-১ম</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="students" class="student-list">
+      <h2>Student List</h2>
+      <div>
+        <img src="student/96.jpg" alt="Student 1" />
+        <span>Name: Rafi | Roll: 096 | Phone: 01615677557</span>
+      </div>
+      <div>
+        <img src="student/111.jpg" alt="Student 2" />
+        <span>Name: Rafi Siddique | Roll: 111 | Phone: 01811261405</span>
+      </div>
+      <div>
+        <img src="student/112.jpg" alt="Student 3" />
+        <span>Name: Anoy | Roll: 112 | Phone: 01715954627</span>
+      </div>
+      <div>
+        <img src="student/117.jpg" alt="Student 4" />
+        <span>Name: Tasin | Roll: 117 | Phone: 01319408002</span>
+      </div>
+      <div>
+        <img src="student/143.jpg" alt="Student 5" />
+        <span>Name: Shuvo | Roll: 143 | Phone: 01724313826</span>
+      </div>
+      <div>
+        <img src="student/144.jpg" alt="Student 6" />
+        <span>Name: Sharot | Roll: 144 | Phone: 01791617994</span>
+      </div>
+      <div>
+        <img src="student/163.jpg" alt="Student 7" />
+        <span>Name: Saum | Roll: 163 | Phone: 01884089648</span>
+      </div>
+      <div>
+        <img src="student/166.jpg" alt="Student 8" />
+        <span>Name: Tabib | Roll: 166 | Phone: 01772190682</span>
+      </div>
+      <div>
+        <img src="student/174.jpg" alt="Student 9" />
+        <span>Name: Zisan | Roll: 174 | Phone: 01770268235</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 10" />
+        <span>Name: Student 10 | Roll: 179 | Phone: 123-456-7899</span>
+      </div>
+      <div>
+        <img src="student/182.jpg" alt="Student 11" />
+        <span>Name: Student 11 | Roll: 182 | Phone: 01610379366</span>
+      </div>
+      <div>
+        <img src="student/189.jpg" alt="Student 12" />
+        <span>Name: Sefa | Roll: 189 | Phone: 01996471598</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 13" />
+        <span>Name: Student 13 | Roll: 192 | Phone: 123-456-7902</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 14" />
+        <span>Name: Student 14 | Roll: 193 | Phone: 123-456-7903</span>
+      </div>
+      <div>
+        <img src="student/237.jpg" alt="Student 15" />
+        <span>Name: Arko | Roll: 237 | Phone: 01325531038</span>
+      </div>
+      <div>
+        <img src="student/239.jpg" alt="Student 31" />
+        <span>Name: Sagor | Roll: 239 | Phone: 01961884540</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 32" />
+        <span>Name: Student 32 | Roll: 243 | Phone: 123-456-7921</span>
+      </div>
+      <div>
+        <img src="student/249.jpg" alt="Student 33" />
+        <span>Name: Bayjid | Roll: 249 | Phone: 01304883732</span>
+      </div>
+      <div>
+        <img src="student/tuhin.jpg" alt="Student 34" />
+        <span>Name: Tuhin | Roll: 256 | Phone: 01602728567</span>
+      </div>
+      <div>
+        <img src="student/259.jpg" alt="Student 35" />
+        <span>Name: Noman | Roll: 259 | Phone: 01816394584</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 36" />
+        <span>Name: Student 36 | Roll: 263 | Phone: 123-456-7925</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 37" />
+        <span>Name: Student 37 | Roll: 265 | Phone: 123-456-7926</span>
+      </div>
+      <div>
+        <img src="student/266.jpg" alt="Student 38" />
+        <span>Name: Suman | Roll: 266 | Phone: 01897308432</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 39" />
+        <span>Name: Student 39 | Roll: 273 | Phone: 123-456-7928</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 40" />
+        <span>Name: Student 40 | Roll: 274 | Phone: 123-456-7929</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 41" />
+        <span>Name: Student 41 | Roll: 276 | Phone: 123-456-7930</span>
+      </div>
+      <div>
+        <img src="student/279.jpg" alt="Student 42" />
+        <span>Name: Nirob | Roll: 279 | Phone: 01615277627</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 43" />
+        <span>Name: Mahin | Roll: 281 | Phone: 01725026190</span>
+      </div>
+      <div>
+        <img src="student/282.jpg" alt="Student 44" />
+        <span>Name: Rafi | Roll: 282 | Phone: 01307557110</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 45" />
+        <span>Name: Student 45 | Roll: 283 | Phone: 123-456-7934</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 46" />
+        <span>Name: Student 46 | Roll: 284 | Phone: 123-456-7935</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 16" />
+        <span>Name: Student 16 | Roll: 300 | Phone: 123-456-7905</span>
+      </div>
+      <div>
+        <img src="student/301.jpg" alt="Student 17" />
+        <span>Name: Rahat | Roll: 301 | Phone: 123-456-7906</span>
+      </div>
+      <div>
+        <img src="student/304.jpg" alt="Student 18" />
+        <span>Name: Shizan | Roll: 304 | Phone: 01772187692</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 19" />
+        <span>Name: Student 19 | Roll: 306 | Phone: 123-456-7908</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 20" />
+        <span>Name: Student 20 | Roll: 308 | Phone: 123-456-7909</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 21" />
+        <span>Name: Student 21 | Roll: 319 | Phone: 123-456-7910</span>
+      </div>
+      <div>
+        <img src="student/320.jpg" alt="Student 22" />
+        <span>Name: Rozin | Roll: 320 | Phone: 01841209575</span>
+      </div>
+      <div>
+        <img src="student/324.jpg" alt="Student 23" />
+        <span>Name: Rifat | Roll: 324 | Phone: 01311306543</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 24" />
+        <span>Name: Student 24 | Roll: 327 | Phone: 123-456-7913</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 25" />
+        <span>Name: Student 25 | Roll: 328 | Phone: 01330789543</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 26" />
+        <span>Name: Student 26 | Roll: 334 | Phone: 123-456-7915</span>
+      </div>
+      <div>
+        <img src="student/336.jpg" alt="Student 27" />
+        <span>Name: Himon | Roll: 336 | Phone: 01877837297</span>
+      </div>
+      <div>
+        <img src="student/339.jpg" alt="Student 28" />
+        <span>Name: Shahin | Roll: 339 | Phone: 01623698667</span>
+      </div>
+      <div>
+        <img src="avatar.jpg" alt="Student 29" />
+        <span>Name: Student 29 | Roll: 342 | Phone: 123-456-7918</span>
+      </div>
+      <div>
+        <img src="student/346.jpg" alt="Student 30" />
+        <span>Name: Nafis | Roll: 346 | Phone: 01716299262</span>
+      </div>
+    </section>
+    <section id="credits">
+      <h2>Credits</h2>
+      <p>Designed and developed by Sharot and Saum</p>
+    </section>
+  </div>
+
+  <div class="footerBottom">
+    <p>
+      CopyRight &copy;2025 Designed by
+      <span class="Designer"><b>Sidra Saum and Sharot Ghosh</b></span>
+    </p>
+    <div class="live_Typeing">
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script>
+        var typed = new Typed('#typed-text', {
+          strings: [
+            "Class 10-D Official Website",
+            "Explore Class Routines & Notes",
+            "Check Latest Events & News",
+            "Meet Your Classmates",
+            "Stay Updated, Stay Ahead!",
+            "Your Smart, Study Buddy",
+            "Made by Students, for Students"
+          ],
+          typeSpeed: 60,
+          backSpeed: 40,
+          backDelay: 1500,
+          loop: true
+        });
+      </script>
+    </div>
+    <script>
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        preloader.style.opacity = "0";
+        preloader.style.visibility = "hidden";
+        preloader.style.transition = "opacity 0.5s ease-out";
+        setTimeout(() => preloader.remove(), 500); // optional cleanup
+      });
+    </script>
+</body>
+
+</html>

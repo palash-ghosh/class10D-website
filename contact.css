@@ -1,0 +1,128 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #292525;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #3bc046;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 200px;
+  border-radius: 20%;
+  margin-bottom: 15px;
+}
+
+.contact-info h2 {
+  font-size: 35px;
+  color: #ffffff;
+}
+
+.contact-info h3 {
+  font-size: 18px;
+  color: #a4aadf;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.separator {
+  font-size: 30px;
+  color: #ff0000;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icons a:hover {
+  background-color: #ff0000;
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background-color: black;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  color: white;
+  font-size: 18px;
+}
+
+.designer {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .profile-img {
+    width: 120px;
+    height: 160px;
+  }
+  .contact-title {
+    font-size: 40px;
+  }
+  .contact-info h2 {
+    font-size: 28px;
+  }
+  .contact-info h3 {
+    font-size: 16px;
+  }
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+  }
+  .social-icons a img {
+    width: 25px;
+    height: 25px;
+  }
+}
